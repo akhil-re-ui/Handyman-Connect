@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HandyMan Connect — Find Local Workers</title>
+  <meta name="description" content="Connect with trusted local plumbers, electricians, carpenters and more. HandyMan Connect — fast, easy, reliable.">
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- Navbar placeholder injected by components.js -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <!-- Left: Content -->
+        <div class="col-lg-6">
+          <div class="hero-label">
+            <i class="fas fa-bolt"></i> Trusted by 5,000+ Customers
+          </div>
+          <h1 class="hero-title">
+            Your Home,
+            <span class="highlight">Fixed Fast.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Connect with verified, skilled workers in your area — plumbers, electricians, carpenters, and more. Book in minutes.
+          </p>
+          <div class="hero-actions">
+            <a href="pages/workers.html" class="btn-primary-c">
+              <i class="fas fa-search"></i> Find a Worker
+            </a>
+            <a href="pages/register.html" class="btn-outline-c" style="color:rgba(255,255,255,0.8); border-color:rgba(255,255,255,0.3);">
+              <i class="fas fa-user-plus"></i> Register as Worker
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="number">500<span>+</span></div>
+              <div class="desc">Skilled Workers</div>
+            </div>
+            <div class="hero-stat">
+              <div class="number">5K<span>+</span></div>
+              <div class="desc">Jobs Completed</div>
+            </div>
+            <div class="hero-stat">
+              <div class="number">4.8<span>★</span></div>
+              <div class="desc">Avg. Rating</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Visual cards -->
+        <div class="col-lg-6 hero-visual">
+          <div class="hero-card-grid">
+            <div class="hero-mini-card">
+              <div class="icon">🔧</div>
+              <p>Plumbing</p>
+            </div>
+            <div class="hero-mini-card">
+              <div class="icon">⚡</div>
+              <p>Electrical</p>
+            </div>
+            <div class="hero-mini-card">
+              <div class="icon">🪓</div>
+              <p>Carpentry</p>
+            </div>
+            <div class="hero-mini-card">
+              <div class="icon">🧹</div>
+              <p>Cleaning</p>
+            </div>
+            <div class="hero-mini-card">
+              <div class="icon">🎨</div>
+              <p>Painting</p>
+            </div>
+            <div class="hero-mini-card">
+              <div class="icon">🔌</div>
+              <p>Appliance Repair</p>
+            </div>
+            <div class="hero-mini-card">
+              <div class="icon">🌿</div>
+              <p>Gardening</p>
+            </div>
+            <div class="hero-mini-card">
+              <div class="icon">🔒</div>
+              <p>Security</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SEARCH BAR ════════════════════════════ -->
+  <section class="search-section">
+    <div class="container">
+      <div class="search-bar-wrap">
+        <span class="search-icon"><i class="fas fa-search"></i></span>
+        <input type="text" id="mainSearch" placeholder="Search for a service (e.g. plumber, electrician...)"/>
+        <button id="searchBtn">Search</button>
+      </div>
+      <div class="search-tags mt-3">
+        <span class="me-2" style="color:var(--text-muted); font-size:0.82rem">Popular:</span>
+        <span class="search-tag">Plumbing</span>
+        <span class="search-tag">Electrician</span>
+        <span class="search-tag">Carpenter</span>
+        <span class="search-tag">House Cleaning</span>
+        <span class="search-tag">Painter</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FEATURED SERVICES ═════════════════════════════ -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="label">What We Offer</div>
+        <h2>Featured Services</h2>
+        <p>From leaky faucets to full renovations — we have skilled professionals for every household need.</p>
+      </div>
+      <div class="row g-4">
+        <!-- Plumbing -->
+        <div class="col-6 col-md-4 col-lg-3 reveal">
+          <a href="pages/services.html" class="text-decoration-none">
+            <div class="service-card">
+              <div class="svc-icon svc-plumbing"><i class="fas fa-faucet"></i></div>
+              <h5>Plumbing</h5>
+              <p>Leaks, pipe repairs, installations & more</p>
+            </div>
+          </a>
+        </div>
+        <!-- Electrical -->
+        <div class="col-6 col-md-4 col-lg-3 reveal">
+          <a href="pages/services.html" class="text-decoration-none">
+            <div class="service-card">
+              <div class="svc-icon svc-electrical"><i class="fas fa-bolt"></i></div>
+              <h5>Electrical</h5>
+              <p>Wiring, fixtures, circuit breakers & panels</p>
+            </div>
+          </a>
+        </div>
+        <!-- Carpentry -->
+        <div class="col-6 col-md-4 col-lg-3 reveal">
+          <a href="pages/services.html" class="text-decoration-none">
+            <div class="service-card">
+              <div class="svc-icon svc-carpentry"><i class="fas fa-hammer"></i></div>
+              <h5>Carpentry</h5>
+              <p>Furniture, doors, flooring & custom woodwork</p>
+            </div>
+          </a>
+        </div>
+        <!-- Cleaning -->
+        <div class="col-6 col-md-4 col-lg-3 reveal">
+          <a href="pages/services.html" class="text-decoration-none">
+            <div class="service-card">
+              <div class="svc-icon svc-cleaning"><i class="fas fa-broom"></i></div>
+              <h5>Cleaning</h5>
+              <p>Deep cleaning, regular maintenance & move-out</p>
+            </div>
+          </a>
+        </div>
+        <!-- Painting -->
+        <div class="col-6 col-md-4 col-lg-3 reveal">
+          <a href="pages/services.html" class="text-decoration-none">
+            <div class="service-card">
+              <div class="svc-icon svc-painting"><i class="fas fa-paint-roller"></i></div>
+              <h5>Painting</h5>
+              <p>Interior, exterior, touch-ups & wallpaper</p>
+            </div>
+          </a>
+        </div>
+        <!-- Appliance Repair -->
+        <div class="col-6 col-md-4 col-lg-3 reveal">
+          <a href="pages/services.html" class="text-decoration-none">
+            <div class="service-card">
+              <div class="svc-icon svc-appliance"><i class="fas fa-tools"></i></div>
+              <h5>Appliance Repair</h5>
+              <p>Washing machines, fridges, ACs & ovens</p>
+            </div>
+          </a>
+        </div>
+        <!-- Gardening -->
+        <div class="col-6 col-md-4 col-lg-3 reveal">
+          <a href="pages/services.html" class="text-decoration-none">
+            <div class="service-card">
+              <div class="svc-icon svc-gardening"><i class="fas fa-leaf"></i></div>
+              <h5>Gardening</h5>
+              <p>Lawn care, pruning, planting & landscaping</p>
+            </div>
+          </a>
+        </div>
+        <!-- Security -->
+        <div class="col-6 col-md-4 col-lg-3 reveal">
+          <a href="pages/services.html" class="text-decoration-none">
+            <div class="service-card">
+              <div class="svc-icon svc-security"><i class="fas fa-lock"></i></div>
+              <h5>Security</h5>
+              <p>CCTV, locks, alarms & access control</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="pages/services.html" class="btn-outline-c">View All Services <i class="fas fa-arrow-right ms-1"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ HOW IT WORKS ═══════════════════════════ -->
+  <section class="section-padding steps-section">
+    <div class="container">
+      <div class="section-header reveal text-center">
+        <div class="label" style="background:rgba(232,80,10,0.15); color:var(--accent)">Simple Process</div>
+        <h2 style="color:white">How It Works</h2>
+        <p style="color:rgba(255,255,255,0.55); margin:0 auto">Get your household tasks done in just 3 easy steps</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4 reveal">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-icon">🔍</div>
+            <h4>Search Service</h4>
+            <p>Tell us what you need — type the service or browse our categories to find the right professional.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-icon">📞</div>
+            <h4>Contact Worker</h4>
+            <p>Browse rated worker profiles, check availability, and reach out directly with one click.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-icon">✅</div>
+            <h4>Get Work Done</h4>
+            <p>Your worker arrives on time, completes the job, and you leave a review to help others.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="pages/request.html" class="btn-primary-c">
+          <i class="fas fa-paper-plane me-2"></i> Submit a Request
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════════════════════ TESTIMONIALS ═══════════════════════════ -->
+  <section class="section-padding bg-light-c">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="label">Happy Customers</div>
+        <h2>What People Say</h2>
+        <p>Real experiences from homeowners who used HandyMan Connect</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 reveal">
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p>"Found an excellent plumber within 10 minutes. He fixed our burst pipe same-day. Absolutely brilliant service!"</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar" style="background:#3B82F6">RK</div>
+              <div>
+                <div class="reviewer-name">James Carol</div>
+                <div class="reviewer-role">Homeowner, Portsmouth</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p>"The carpenter who fixed my wardrobe did an outstanding job. Very professional and affordable pricing too."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar" style="background:#10B981">PS</div>
+              <div>
+                <div class="reviewer-name">Iseral Depaw</div>
+                <div class="reviewer-role">Flat Owner, London</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p>"Hired a painter for my whole apartment. Loved the results! The platform made it so easy to compare and choose."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar" style="background:#8B5CF6">AM</div>
+              <div>
+                <div class="reviewer-name">Randy</div>
+                <div class="reviewer-role">Tenant, Southampton</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CTA BANNER ════════════════════════════ -->
+  <section class="cta-banner">
+    <div class="container position-relative">
+      <h2>Ready to get started?</h2>
+      <p>Join thousands of satisfied customers and skilled workers on India's fastest-growing home services platform.</p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap">
+        <a href="pages/request.html" class="btn-dark-c">
+          <i class="fas fa-search-plus me-2"></i> Find a Worker
+        </a>
+        <a href="pages/register.html" class="btn-outline-c" style="border-color:rgba(255,255,255,0.4); color:white">
+          <i class="fas fa-user-plus me-2"></i> Join as Worker
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <!-- Components -->
+  <script src="js/components.js"></script>
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
