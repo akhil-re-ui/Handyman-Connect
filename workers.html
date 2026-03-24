@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find Workers — HandyMan Connect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="label">Skilled Professionals</div>
+      <h1>Find Workers</h1>
+      <p>Browse verified, rated professionals in your area. Filter by skill, location or availability.</p>
+    </div>
+  </section>
+
+  <!-- Workers Section -->
+  <section class="section-padding">
+    <div class="container">
+
+      <!-- Filter Bar -->
+      <div class="filter-bar reveal">
+        <div class="filter-group">
+          <label>Skill / Service</label>
+          <select id="filterSkill">
+            <option value="">All Skills</option>
+            <option value="plumbing">Plumbing</option>
+            <option value="electrical">Electrical</option>
+            <option value="carpentry">Carpentry</option>
+            <option value="cleaning">Cleaning</option>
+            <option value="painting">Painting</option>
+            <option value="appliance">Appliance Repair</option>
+            <option value="gardening">Gardening</option>
+            <option value="security">Security</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Location</label>
+          <select id="filterLocation">
+            <option value="">All Locations</option>
+            <option value="Portsmouth">Portsmouth</option>
+            <option value="Southampton">Southampton</option>
+            <option value="London">London</option>
+            <option value="Manchester">Manchester</option>
+            <option value="Birmingham">Birmingham</option>
+            <option value="Liverpool">Liverpool</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Availability</label>
+          <select id="filterAvail">
+            <option value="">Any</option>
+            <option value="available">Available Now</option>
+            <option value="unavailable">Busy</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Min. Rating</label>
+          <select id="filterRating">
+            <option value="0">Any Rating</option>
+            <option value="4">4★ & above</option>
+            <option value="4.5">4.5★ & above</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Results count -->
+      <div class="d-flex align-items-center justify-content-between mb-4 reveal">
+        <p class="text-muted mb-0" style="font-size:0.9rem">
+          Showing <strong id="workerCount">12</strong> workers
+        </p>
+        <a href="register.html" class="btn-outline-c" style="padding:8px 18px; font-size:0.85rem">
+          <i class="fas fa-plus me-1"></i> Register as Worker
+        </a>
+      </div>
+
+      <!-- Worker Cards Grid -->
+      <div class="row g-4" id="workersGrid">
+
+        <!-- Worker 1 -->
+        <div class="col-md-6 col-lg-4 worker-card-wrap reveal">
+          <div class="worker-card"
+               data-skill="plumbing"
+               data-location="Portsmouth"
+               data-avail="available"
+               data-rating="4.9">
+            <div class="card-top">
+              <span class="availability-badge available"><i class="fas fa-circle me-1" style="font-size:0.5rem"></i> Available</span>
+              <div class="worker-avatar">JC</div>
+              <div class="worker-name">James Carol</div>
+              <div class="worker-skill">🔧 Plumber</div>
+            </div>
+            <div class="card-body-c">
+              <div class="d-flex align-items-center mb-2">
+                <div class="star-rating">★★★★★</div>
+                <span class="rating-text">4.9 (84 reviews)</span>
+              </div>
+              <div class="worker-meta">
+                <div class="worker-meta-item"><i class="fas fa-map-marker-alt"></i> Portsmouth, Buckland</div>
+                <div class="worker-meta-item"><i class="fas fa-briefcase"></i> 8 Years Experience</div>
+                <div class="worker-meta-item"><i class="fas fa-clock"></i> Mon–Sat, 8 AM – 7 PM</div>
+              </div>
+              <a href="request.html" class="btn-contact"><i class="fas fa-phone me-2"></i> Contact Worker</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Worker 2 -->
+        <div class="col-md-6 col-lg-4 worker-card-wrap reveal">
+          <div class="worker-card"
+               data-skill="electrical"
+               data-location="Southampton"
+               data-avail="available"
+               data-rating="4.7">
+            <div class="card-top">
+              <span class="availability-badge available"><i class="fas fa-circle me-1" style="font-size:0.5rem"></i> Available</span>
+              <div class="worker-avatar" style="background:#F59E0B">RA</div>
+              <div class="worker-name">Randy</div>
+              <div class="worker-skill">⚡ Electrician</div>
+            </div>
+            <div class="card-body-c">
+              <div class="d-flex align-items-center mb-2">
+                <div class="star-rating">★★★★★</div>
+                <span class="rating-text">4.7 (61 reviews)</span>
+              </div>
+              <div class="worker-meta">
+                <div class="worker-meta-item"><i class="fas fa-map-marker-alt"></i> Southampton, Portswood</div>
+                <div class="worker-meta-item"><i class="fas fa-briefcase"></i> 5 Years Experience</div>
+                <div class="worker-meta-item"><i class="fas fa-clock"></i> Mon–Sun, 9 AM – 8 PM</div>
+              </div>
+              <a href="request.html" class="btn-contact"><i class="fas fa-phone me-2"></i> Contact Worker</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Worker 3 -->
+        <div class="col-md-6 col-lg-4 worker-card-wrap reveal">
+          <div class="worker-card"
+               data-skill="carpentry"
+               data-location="London"
+               data-avail="available"
+               data-rating="4.8">
+            <div class="card-top">
+              <span class="availability-badge available"><i class="fas fa-circle me-1" style="font-size:0.5rem"></i> Available</span>
+              <div class="worker-avatar" style="background:#8B5CF6">SJ</div>
+              <div class="worker-name">Samantha James</div>
+              <div class="worker-skill">🪚 Carpenter</div>
+            </div>
+            <div class="card-body-c">
+              <div class="d-flex align-items-center mb-2">
+                <div class="star-rating">★★★★★</div>
+                <span class="rating-text">4.8 (72 reviews)</span>
+              </div>
+              <div class="worker-meta">
+                <div class="worker-meta-item"><i class="fas fa-map-marker-alt"></i> London, Westminster</div>
+                <div class="worker-meta-item"><i class="fas fa-briefcase"></i> 12 Years Experience</div>
+                <div class="worker-meta-item"><i class="fas fa-clock"></i> Tue–Sun, 8 AM – 6 PM</div>
+              </div>
+              <a href="request.html" class="btn-contact"><i class="fas fa-phone me-2"></i> Contact Worker</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Worker 4 -->
+        <div class="col-md-6 col-lg-4 worker-card-wrap reveal">
+          <div class="worker-card"
+               data-skill="cleaning"
+               data-location="Manchester"
+               data-avail="unavailable"
+               data-rating="4.6">
+            <div class="card-top">
+              <span class="availability-badge unavailable"><i class="fas fa-circle me-1" style="font-size:0.5rem"></i> Busy</span>
+              <div class="worker-avatar" style="background:#10B981">MJ</div>
+              <div class="worker-name">Mariam Jacob</div>
+              <div class="worker-skill">🧹 Cleaning Expert</div>
+            </div>
+            <div class="card-body-c">
+              <div class="d-flex align-items-center mb-2">
+                <div class="star-rating">★★★★½</div>
+                <span class="rating-text">4.6 (93 reviews)</span>
+              </div>
+              <div class="worker-meta">
+                <div class="worker-meta-item"><i class="fas fa-map-marker-alt"></i> Manchester, Stockport</div>
+                <div class="worker-meta-item"><i class="fas fa-briefcase"></i> 4 Years Experience</div>
+                <div class="worker-meta-item"><i class="fas fa-clock"></i> Mon–Sat, 7 AM – 5 PM</div>
+              </div>
+              <a href="request.html" class="btn-contact"><i class="fas fa-phone me-2"></i> Contact Worker</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Worker 5 -->
+        <div class="col-md-6 col-lg-4 worker-card-wrap reveal">
+          <div class="worker-card"
+               data-skill="painting"
+               data-location="Birmingham"
+               data-avail="available"
+               data-rating="4.5">
+            <div class="card-top">
+              <span class="availability-badge available"><i class="fas fa-circle me-1" style="font-size:0.5rem"></i> Available</span>
+              <div class="worker-avatar" style="background:#EF4444">PP</div>
+              <div class="worker-name">Peter Parker</div>
+              <div class="worker-skill">🎨 Painter</div>
+            </div>
+            <div class="card-body-c">
+              <div class="d-flex align-items-center mb-2">
+                <div class="star-rating">★★★★½</div>
+                <span class="rating-text">4.5 (47 reviews)</span>
+              </div>
+              <div class="worker-meta">
+                <div class="worker-meta-item"><i class="fas fa-map-marker-alt"></i> Birmingham, Bromford</div>
+                <div class="worker-meta-item"><i class="fas fa-briefcase"></i> 6 Years Experience</div>
+                <div class="worker-meta-item"><i class="fas fa-clock"></i> Mon–Sun, 9 AM – 7 PM</div>
+              </div>
+              <a href="request.html" class="btn-contact"><i class="fas fa-phone me-2"></i> Contact Worker</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Worker 6 -->
+        <div class="col-md-6 col-lg-4 worker-card-wrap reveal">
+          <div class="worker-card"
+               data-skill="appliance"
+               data-location="Liverpool"
+               data-avail="available"
+               data-rating="4.8">
+            <div class="card-top">
+              <span class="availability-badge available"><i class="fas fa-circle me-1" style="font-size:0.5rem"></i> Available</span>
+              <div class="worker-avatar" style="background:var(--primary)">TS</div>
+              <div class="worker-name">Tony Stark</div>
+              <div class="worker-skill">🔌 Appliance Technician</div>
+            </div>
+            <div class="card-body-c">
+              <div class="d-flex align-items-center mb-2">
+                <div class="star-rating">★★★★★</div>
+                <span class="rating-text">4.8 (118 reviews)</span>
+              </div>
+              <div class="worker-meta">
+                <div class="worker-meta-item"><i class="fas fa-map-marker-alt"></i> Liverpool, Elmswood</div>
+                <div class="worker-meta-item"><i class="fas fa-briefcase"></i> 10 Years Experience</div>
+                <div class="worker-meta-item"><i class="fas fa-clock"></i> Mon–Sat, 8 AM – 8 PM</div>
+              </div>
+              <a href="request.html" class="btn-contact"><i class="fas fa-phone me-2"></i> Contact Worker</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Worker 7 -->
+        <div class="col-md-6 col-lg-4 worker-card-wrap reveal">
+          <div class="worker-card"
+               data-skill="gardening"
+               data-location="Portsmouth"
+               data-avail="available"
+               data-rating="4.4">
+            <div class="card-top">
+              <span class="availability-badge available"><i class="fas fa-circle me-1" style="font-size:0.5rem"></i> Available</span>
+              <div class="worker-avatar" style="background:#22C55E">MJ</div>
+              <div class="worker-name">Mary Jane</div>
+              <div class="worker-skill">🌿 Gardener</div>
+            </div>
+            <div class="card-body-c">
+              <div class="d-flex align-items-center mb-2">
+                <div class="star-rating">★★★★½</div>
+                <span class="rating-text">4.4 (42 reviews)</span>
+              </div>
+              <div class="worker-meta">
+                <div class="worker-meta-item"><i class="fas fa-map-marker-alt"></i> Portsmouth, Fareham</div>
+                <div class="worker-meta-item"><i class="fas fa-briefcase"></i> 3 Years Experience</div>
+                <div class="worker-meta-item"><i class="fas fa-clock"></i> Mon–Fri, 6 AM – 4 PM</div>
+              </div>
+              <a href="request.html" class="btn-contact"><i class="fas fa-phone me-2"></i> Contact Worker</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Worker 8 -->
+        <div class="col-md-6 col-lg-4 worker-card-wrap reveal">
+          <div class="worker-card"
+               data-skill="security"
+               data-location="Southampton"
+               data-avail="unavailable"
+               data-rating="4.7">
+            <div class="card-top">
+              <span class="availability-badge unavailable"><i class="fas fa-circle me-1" style="font-size:0.5rem"></i> Busy</span>
+              <div class="worker-avatar" style="background:#64748B">MP</div>
+              <div class="worker-name">May Parker</div>
+              <div class="worker-skill">🔒 Security Expert</div>
+            </div>
+            <div class="card-body-c">
+              <div class="d-flex align-items-center mb-2">
+                <div class="star-rating">★★★★★</div>
+                <span class="rating-text">4.7 (56 reviews)</span>
+              </div>
+              <div class="worker-meta">
+                <div class="worker-meta-item"><i class="fas fa-map-marker-alt"></i> Southampton, Winchester</div>
+                <div class="worker-meta-item"><i class="fas fa-briefcase"></i> 7 Years Experience</div>
+                <div class="worker-meta-item"><i class="fas fa-clock"></i> Mon–Sun, 10 AM – 7 PM</div>
+              </div>
+              <a href="request.html" class="btn-contact"><i class="fas fa-phone me-2"></i> Contact Worker</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Worker 9 -->
+        <div class="col-md-6 col-lg-4 worker-card-wrap reveal">
+          <div class="worker-card"
+               data-skill="electrical"
+               data-location="London"
+               data-avail="available"
+               data-rating="4.9">
+            <div class="card-top">
+              <span class="availability-badge available"><i class="fas fa-circle me-1" style="font-size:0.5rem"></i> Available</span>
+              <div class="worker-avatar" style="background:#F59E0B">MT</div>
+              <div class="worker-name">Myke Tyson</div>
+              <div class="worker-skill">⚡ Electrician</div>
+            </div>
+            <div class="card-body-c">
+              <div class="d-flex align-items-center mb-2">
+                <div class="star-rating">★★★★★</div>
+                <span class="rating-text">4.9 (102 reviews)</span>
+              </div>
+              <div class="worker-meta">
+                <div class="worker-meta-item"><i class="fas fa-map-marker-alt"></i> London, Peckham</div>
+                <div class="worker-meta-item"><i class="fas fa-briefcase"></i> 9 Years Experience</div>
+                <div class="worker-meta-item"><i class="fas fa-clock"></i> Mon–Sat, 8 AM – 6 PM</div>
+              </div>
+              <a href="request.html" class="btn-contact"><i class="fas fa-phone me-2"></i> Contact Worker</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Worker 10 -->
+        <div class="col-md-6 col-lg-4 worker-card-wrap reveal">
+          <div class="worker-card"
+               data-skill="cleaning"
+               data-location="Portsmouth"
+               data-avail="available"
+               data-rating="4.5">
+            <div class="card-top">
+              <span class="availability-badge available"><i class="fas fa-circle me-1" style="font-size:0.5rem"></i> Available</span>
+              <div class="worker-avatar" style="background:#10B981">SS</div>
+              <div class="worker-name">Soren Skou</div>
+              <div class="worker-skill">🧹 Cleaning Expert</div>
+            </div>
+            <div class="card-body-c">
+              <div class="d-flex align-items-center mb-2">
+                <div class="star-rating">★★★★½</div>
+                <span class="rating-text">4.5 (65 reviews)</span>
+              </div>
+              <div class="worker-meta">
+                <div class="worker-meta-item"><i class="fas fa-map-marker-alt"></i> Portsmouth, Eastney</div>
+                <div class="worker-meta-item"><i class="fas fa-briefcase"></i> 6 Years Experience</div>
+                <div class="worker-meta-item"><i class="fas fa-clock"></i> Mon–Sat, 7 AM – 5 PM</div>
+              </div>
+              <a href="request.html" class="btn-contact"><i class="fas fa-phone me-2"></i> Contact Worker</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Worker 11 -->
+        <div class="col-md-6 col-lg-4 worker-card-wrap reveal">
+          <div class="worker-card"
+               data-skill="plumbing"
+               data-location="Manchester"
+               data-avail="available"
+               data-rating="4.6">
+            <div class="card-top">
+              <span class="availability-badge available"><i class="fas fa-circle me-1" style="font-size:0.5rem"></i> Available</span>
+              <div class="worker-avatar" style="background:#3B82F6">BB</div>
+              <div class="worker-name">Bruce Banner</div>
+              <div class="worker-skill">🔧 Plumber</div>
+            </div>
+            <div class="card-body-c">
+              <div class="d-flex align-items-center mb-2">
+                <div class="star-rating">★★★★½</div>
+                <span class="rating-text">4.6 (48 reviews)</span>
+              </div>
+              <div class="worker-meta">
+                <div class="worker-meta-item"><i class="fas fa-map-marker-alt"></i> Manchester, Wilmslow</div>
+                <div class="worker-meta-item"><i class="fas fa-briefcase"></i> 11 Years Experience</div>
+                <div class="worker-meta-item"><i class="fas fa-clock"></i> Mon–Sun, 8 AM – 8 PM</div>
+              </div>
+              <a href="request.html" class="btn-contact"><i class="fas fa-phone me-2"></i> Contact Worker</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Worker 12 -->
+        <div class="col-md-6 col-lg-4 worker-card-wrap reveal">
+          <div class="worker-card"
+               data-skill="carpentry"
+               data-location="Birmingham"
+               data-avail="available"
+               data-rating="4.8">
+            <div class="card-top">
+              <span class="availability-badge available"><i class="fas fa-circle me-1" style="font-size:0.5rem"></i> Available</span>
+              <div class="worker-avatar" style="background:#8B5CF6">MB</div>
+              <div class="worker-name">Martin Brenner</div>
+              <div class="worker-skill">🪚 Carpenter</div>
+            </div>
+            <div class="card-body-c">
+              <div class="d-flex align-items-center mb-2">
+                <div class="star-rating">★★★★★</div>
+                <span class="rating-text">4.8 (77 reviews)</span>
+              </div>
+              <div class="worker-meta">
+                <div class="worker-meta-item"><i class="fas fa-map-marker-alt"></i> Birmingham, Hodgehill</div>
+                <div class="worker-meta-item"><i class="fas fa-briefcase"></i> 14 Years Experience</div>
+                <div class="worker-meta-item"><i class="fas fa-clock"></i> Mon–Sat, 9 AM – 7 PM</div>
+              </div>
+              <a href="request.html" class="btn-contact"><i class="fas fa-phone me-2"></i> Contact Worker</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row -->
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container position-relative">
+      <h2>Are you a skilled worker?</h2>
+      <p>Join our platform and start getting work requests from homeowners in your area.</p>
+      <a href="register.html" class="btn-dark-c"><i class="fas fa-user-plus me-2"></i> Register Now — It's Free</a>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
