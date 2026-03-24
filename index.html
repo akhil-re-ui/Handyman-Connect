@@ -12,7 +12,29 @@
 </head>
 <body>
 
-  <div id="navbar-placeholder"></div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm" style="border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html" style="color: var(--primary); font-family: var(--font-display);">
+        <i class="fas fa-tools me-2"></i>HandyMan Connect
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation" style="border:none; outline:none;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="workers.html">Find Workers</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a href="request.html" class="btn btn-outline-primary" style="border-radius: 8px; font-weight: 600;"><i class="fas fa-search me-1"></i> Book</a>
+          <a href="register.html" class="btn btn-primary" style="background-color: var(--primary); border: none; border-radius: 8px; font-weight: 600;"><i class="fas fa-user-plus me-1"></i> Join</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
   <main id="app-container">
 
@@ -597,10 +619,46 @@
 
   </main>
 
-  <div id="footer-placeholder"></div>
+  <footer class="bg-dark text-white pt-5 pb-3 mt-auto" style="background-color: #111827 !important;">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-4">
+          <h5 class="fw-bold mb-3" style="font-family: var(--font-display);"><i class="fas fa-tools me-2 text-primary"></i>HandyMan Connect</h5>
+          <p class="text-secondary small">Connecting you with trusted, verified local professionals for all your home repair and maintenance needs.</p>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h6 class="fw-bold mb-3">Quick Links</h6>
+          <ul class="list-unstyled text-secondary small">
+            <li class="mb-2"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+            <li class="mb-2"><a href="about.html" class="text-decoration-none text-secondary">About Us</a></li>
+            <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Services</a></li>
+            <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-6">
+          <h6 class="fw-bold mb-3">For Users</h6>
+          <ul class="list-unstyled text-secondary small">
+            <li class="mb-2"><a href="workers.html" class="text-decoration-none text-secondary">Find a Worker</a></li>
+            <li class="mb-2"><a href="request.html" class="text-decoration-none text-secondary">Submit Request</a></li>
+            <li class="mb-2"><a href="register.html" class="text-decoration-none text-secondary">Register as Worker</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="fw-bold mb-3">Contact Info</h6>
+          <ul class="list-unstyled text-secondary small">
+            <li class="mb-2"><i class="fas fa-envelope me-2"></i>support@handymanconnect.in</li>
+            <li class="mb-2"><i class="fas fa-phone me-2"></i>+44 98765 43210</li>
+            <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Portsmouth University</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top border-secondary pt-3 mt-3 text-center text-secondary small">
+        <p class="mb-0">&copy; 2026 HandyMan Connect. Built as an MSc Project.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-  <script src="js/components.js"></script>
   <script src="js/main.js"></script>
 
   <script>
