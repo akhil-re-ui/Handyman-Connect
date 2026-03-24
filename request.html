@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Request a Service — HandyMan Connect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="label">Book a Professional</div>
+      <h1>Request a Service</h1>
+      <p>Tell us what you need and we'll connect you with the best local professional for the job.</p>
+    </div>
+  </section>
+
+  <!-- Request Form -->
+  <section class="section-padding form-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <!-- Info cards -->
+          <div class="row g-3 mb-4 reveal">
+            <div class="col-4">
+              <div class="text-center p-3" style="background:white; border-radius:12px; border:1.5px solid var(--border)">
+                <i class="fas fa-bolt" style="color:var(--primary); font-size:1.4rem"></i>
+                <div style="font-size:0.78rem; font-weight:600; margin-top:6px">Fast Matching</div>
+                <div style="font-size:0.72rem; color:var(--text-muted)">Under 30 mins</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="text-center p-3" style="background:white; border-radius:12px; border:1.5px solid var(--border)">
+                <i class="fas fa-shield-alt" style="color:var(--primary); font-size:1.4rem"></i>
+                <div style="font-size:0.78rem; font-weight:600; margin-top:6px">Verified Workers</div>
+                <div style="font-size:0.72rem; color:var(--text-muted)">Background checked</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="text-center p-3" style="background:white; border-radius:12px; border:1.5px solid var(--border)">
+                <i class="fas fa-thumbs-up" style="color:var(--primary); font-size:1.4rem"></i>
+                <div style="font-size:0.78rem; font-weight:600; margin-top:6px">Satisfaction</div>
+                <div style="font-size:0.72rem; color:var(--text-muted)">4.8★ average</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Card -->
+          <div class="form-card reveal">
+            <h3>Submit a Service Request</h3>
+            <p class="subtitle">Fill in the details below and available workers will be notified to contact you.</p>
+
+            <!-- Success Toast -->
+            <div class="success-toast" id="requestToast">
+              <i class="fas fa-check-circle"></i>
+              <span>✅ Request submitted successfully! Matching workers will contact you within 30 minutes.</span>
+            </div>
+
+            <form id="requestForm" class="handyman-form" novalidate>
+
+              <!-- Customer Info -->
+              <div style="font-size:0.78rem; font-weight:700; color:var(--primary); text-transform:uppercase; letter-spacing:2px; margin-bottom:16px">
+                <i class="fas fa-user me-2"></i>Your Information
+              </div>
+
+              <div class="form-row-c">
+                <div class="form-group-c">
+                  <label class="form-label-c">Your Name <span style="color:var(--primary)">*</span></label>
+                  <input type="text" class="form-control-c" placeholder="e.g.AKHIL REDDY" required/>
+                </div>
+                <div class="form-group-c">
+                  <label class="form-label-c">Phone Number <span style="color:var(--primary)">*</span></label>
+                  <input type="tel" class="form-control-c" placeholder="e.g. 9876543210" required/>
+                </div>
+              </div>
+
+              <div class="form-group-c">
+                <label class="form-label-c">Email Address (Optional)</label>
+                <input type="email" class="form-control-c" placeholder="e.g. Akhil@example.com"/>
+              </div>
+
+              <div class="form-divider"></div>
+
+              <!-- Service Info -->
+              <div style="font-size:0.78rem; font-weight:700; color:var(--primary); text-transform:uppercase; letter-spacing:2px; margin-bottom:16px">
+                <i class="fas fa-tools me-2"></i>Service Details
+              </div>
+
+              <div class="form-row-c">
+                <div class="form-group-c">
+                  <label class="form-label-c">Service Needed <span style="color:var(--primary)">*</span></label>
+                  <select class="form-control-c" required>
+                    <option value="">Select service type</option>
+                    <option>Plumbing</option>
+                    <option>Electrical Work</option>
+                    <option>Carpentry</option>
+                    <option>House Cleaning</option>
+                    <option>Painting</option>
+                    <option>Appliance Repair</option>
+                    <option>Gardening</option>
+                    <option>Security Systems</option>
+                    <option>AC Service</option>
+                    <option>Tiling & Flooring</option>
+                    <option>Pest Control</option>
+                    <option>Moving & Packing</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group-c">
+                  <label class="form-label-c">Urgency Level <span style="color:var(--primary)">*</span></label>
+                  <select class="form-control-c" required>
+                    <option value="">Select urgency</option>
+                    <option>🚨 Emergency (ASAP)</option>
+                    <option>📅 Today</option>
+                    <option>📆 Tomorrow</option>
+                    <option>🗓 This week</option>
+                    <option>📋 Flexible (no rush)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row-c">
+                <div class="form-group-c">
+                  <label class="form-label-c">Preferred Date <span style="color:var(--primary)">*</span></label>
+                  <input type="date" class="form-control-c" required/>
+                </div>
+                <div class="form-group-c">
+                  <label class="form-label-c">Preferred Time <span style="color:var(--primary)">*</span></label>
+                  <select class="form-control-c" required>
+                    <option value="">Select time</option>
+                    <option>Morning (6 AM – 12 PM)</option>
+                    <option>Afternoon (12 PM – 4 PM)</option>
+                    <option>Evening (4 PM – 8 PM)</option>
+                    <option>Anytime (Flexible)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-divider"></div>
+
+              <!-- Location -->
+              <div style="font-size:0.78rem; font-weight:700; color:var(--primary); text-transform:uppercase; letter-spacing:2px; margin-bottom:16px">
+                <i class="fas fa-map-marker-alt me-2"></i>Location
+              </div>
+
+              <div class="form-row-c">
+                <div class="form-group-c">
+                  <label class="form-label-c">City <span style="color:var(--primary)">*</span></label>
+                  <select class="form-control-c" required>
+                    <option value="">Select city</option>
+                    <option>Portsmouth</option>
+                    <option>Southampton</option>
+                    <option>London</option>
+                    <option>Manchester</option>
+                    <option>Birmingham</option>
+                    <option>Liverpool</option>
+                    <option>Oxford</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group-c">
+                  <label class="form-label-c">Area / Locality <span style="color:var(--primary)">*</span></label>
+                  <input type="text" class="form-control-c" placeholder="e.g.UK" required/>
+                </div>
+              </div>
+
+              <div class="form-group-c">
+                <label class="form-label-c">Full Address <span style="color:var(--primary)">*</span></label>
+                <textarea class="form-control-c" rows="2" placeholder="Flat no., building name, street, landmark..." required></textarea>
+              </div>
+
+              <div class="form-divider"></div>
+
+              <!-- Problem Description -->
+              <div class="form-group-c">
+                <label class="form-label-c">Describe the Problem <span style="color:var(--primary)">*</span></label>
+                <textarea class="form-control-c" rows="4" placeholder="Please describe the issue in detail — what's wrong, when it started, any relevant details that could help the worker prepare..." required></textarea>
+              </div>
+
+              <div class="form-group-c">
+                <label class="form-label-c">Estimated Budget (Optional)</label>
+                <select class="form-control-c">
+                  <option value="">Select budget range</option>
+                  <option>Under ₹500</option>
+                  <option>₹500 – ₹1,000</option>
+                  <option>₹1,000 – ₹3,000</option>
+                  <option>₹3,000 – ₹5,000</option>
+                  <option>₹5,000 – ₹10,000</option>
+                  <option>Above ₹10,000</option>
+                  <option>Not sure / Get quotes</option>
+                </select>
+              </div>
+
+              <!-- Consent -->
+              <div class="form-group-c d-flex align-items-start gap-3 mt-2">
+                <input type="checkbox" id="agreeRequest" style="margin-top:3px; accent-color:var(--primary); width:16px; height:16px; flex-shrink:0" required/>
+                <label for="agreeRequest" style="font-size:0.85rem; color:var(--text-muted); cursor:pointer">
+                  I allow HandyMan Connect to share my contact details with relevant service providers.
+                </label>
+              </div>
+
+              <button type="submit" class="btn-primary-c w-100 justify-content-center mt-3" style="padding:16px">
+                <i class="fas fa-paper-plane me-2"></i> Submit Request
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    document.getElementById('requestForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const toast = document.getElementById('requestToast');
+      toast.style.display = 'flex';
+      toast.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      this.reset();
+      setTimeout(() => { toast.style.display = 'none'; }, 6000);
+    });
+  </script>
+</body>
+</html>
