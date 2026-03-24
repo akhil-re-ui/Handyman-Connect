@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register as Worker — HandyMan Connect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="label">Join Our Network</div>
+      <h1>Register as a Worker</h1>
+      <p>Create your professional profile and start receiving work requests from customers near you.</p>
+    </div>
+  </section>
+
+  <!-- Registration Form -->
+  <section class="section-padding form-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <!-- Benefits strip -->
+          <div class="row g-3 mb-4 reveal">
+            <div class="col-4">
+              <div class="text-center p-3" style="background:white; border-radius:12px; border:1.5px solid var(--border)">
+                <i class="fas fa-users" style="color:var(--primary); font-size:1.5rem"></i>
+                <div style="font-size:0.78rem; font-weight:600; margin-top:6px; color:var(--text)">5,000+ Customers</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="text-center p-3" style="background:white; border-radius:12px; border:1.5px solid var(--border)">
+                <i class="fas fa-rupee-sign" style="color:var(--primary); font-size:1.5rem"></i>
+                <div style="font-size:0.78rem; font-weight:600; margin-top:6px; color:var(--text)">Free to Join</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="text-center p-3" style="background:white; border-radius:12px; border:1.5px solid var(--border)">
+                <i class="fas fa-star" style="color:var(--primary); font-size:1.5rem"></i>
+                <div style="font-size:0.78rem; font-weight:600; margin-top:6px; color:var(--text)">Build Your Brand</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Card -->
+          <div class="form-card reveal">
+            <h3>Create Your Worker Profile</h3>
+            <p class="subtitle">Fill in your details. Customers will see this information when browsing workers.</p>
+
+            <!-- Success Toast -->
+            <div class="success-toast" id="registerToast">
+              <i class="fas fa-check-circle"></i>
+              <span>🎉 Registration successful! Your profile is under review. We'll contact you within 24 hours.</span>
+            </div>
+
+            <form id="registerForm" class="handyman-form" novalidate>
+
+              <!-- Section: Personal Info -->
+              <div style="font-size:0.78rem; font-weight:700; color:var(--primary); text-transform:uppercase; letter-spacing:2px; margin-bottom:16px">
+                <i class="fas fa-user me-2"></i>Personal Information
+              </div>
+
+              <div class="form-row-c">
+                <div class="form-group-c">
+                  <label class="form-label-c">Full Name <span style="color:var(--primary)">*</span></label>
+                  <input type="text" class="form-control-c" placeholder="e.g. Akhil Reddy" required/>
+                </div>
+                <div class="form-group-c">
+                  <label class="form-label-c">Phone Number <span style="color:var(--primary)">*</span></label>
+                  <input type="tel" class="form-control-c" placeholder="e.g. +44 987654321" required/>
+                </div>
+              </div>
+
+              <div class="form-group-c">
+                <label class="form-label-c">Email Address <span style="color:var(--primary)">*</span></label>
+                <input type="email" class="form-control-c" placeholder="e.g. akhil@example.com" required/>
+              </div>
+
+              <div class="form-divider"></div>
+
+              <!-- Section: Professional Info -->
+              <div style="font-size:0.78rem; font-weight:700; color:var(--primary); text-transform:uppercase; letter-spacing:2px; margin-bottom:16px">
+                <i class="fas fa-briefcase me-2"></i>Professional Details
+              </div>
+
+              <div class="form-row-c">
+                <div class="form-group-c">
+                  <label class="form-label-c">Skill / Service Category <span style="color:var(--primary)">*</span></label>
+                  <select class="form-control-c" required>
+                    <option value="">Select your main skill</option>
+                    <option>Plumbing</option>
+                    <option>Electrical Work</option>
+                    <option>Carpentry</option>
+                    <option>House Cleaning</option>
+                    <option>Painting</option>
+                    <option>Appliance Repair</option>
+                    <option>Gardening</option>
+                    <option>Security Systems</option>
+                    <option>AC Service</option>
+                    <option>Tiling & Flooring</option>
+                    <option>Pest Control</option>
+                    <option>Moving & Packing</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group-c">
+                  <label class="form-label-c">Years of Experience <span style="color:var(--primary)">*</span></label>
+                  <select class="form-control-c" required>
+                    <option value="">Select experience</option>
+                    <option>Less than 1 year</option>
+                    <option>1–2 years</option>
+                    <option>3–5 years</option>
+                    <option>6–10 years</option>
+                    <option>More than 10 years</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group-c">
+                <label class="form-label-c">Available Working Hours <span style="color:var(--primary)">*</span></label>
+                <select class="form-control-c" required>
+                  <option value="">Select availability</option>
+                  <option>Weekdays only (Mon–Fri)</option>
+                  <option>Weekends only (Sat–Sun)</option>
+                  <option>Mon–Sat, 8 AM – 6 PM</option>
+                  <option>Mon–Sun, 8 AM – 8 PM</option>
+                  <option>Flexible / On-call</option>
+                  <option>Mornings only (6 AM – 12 PM)</option>
+                  <option>Afternoons only (12 PM – 6 PM)</option>
+                </select>
+              </div>
+
+              <div class="form-divider"></div>
+
+              <!-- Section: Location -->
+              <div style="font-size:0.78rem; font-weight:700; color:var(--primary); text-transform:uppercase; letter-spacing:2px; margin-bottom:16px">
+                <i class="fas fa-map-marker-alt me-2"></i>Location
+              </div>
+
+              <div class="form-row-c">
+                <div class="form-group-c">
+                  <label class="form-label-c">City <span style="color:var(--primary)">*</span></label>
+                  <select class="form-control-c" required>
+                    <option value="">Select city</option>
+                    <option>Portsmouth</option>
+                    <option>Southampton</option>
+                    <option>London</option>
+                    <option>Manchester</option>
+                    <option>Birmingham</option>
+                    <option>Liverpool</option>
+                    <option>Oxford</option>
+                    <option>Cambridge</option>
+                    <option>Bristol</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group-c">
+                  <label class="form-label-c">Area / Locality <span style="color:var(--primary)">*</span></label>
+                  <input type="text" class="form-control-c" placeholder="e.g. Andheri West" required/>
+                </div>
+              </div>
+
+              <div class="form-group-c">
+                <label class="form-label-c">Full Address</label>
+                <textarea class="form-control-c" rows="2" placeholder="Optional: Street address, landmark..."></textarea>
+              </div>
+
+              <div class="form-divider"></div>
+
+              <!-- Section: About -->
+              <div class="form-group-c">
+                <label class="form-label-c">Brief About Yourself</label>
+                <textarea class="form-control-c" rows="3" placeholder="Describe your skills, experience, and what makes you a great worker..."></textarea>
+              </div>
+
+              <div class="form-group-c">
+                <label class="form-label-c">ID Proof Type</label>
+                <select class="form-control-c">
+                  <option value="">Select ID proof</option>
+                  <option>Aadhaar Card</option>
+                  <option>PAN Card</option>
+                  <option>Voter ID</option>
+                  <option>Driving License</option>
+                  <option>Passport</option>
+                </select>
+              </div>
+
+              <!-- Consent -->
+              <div class="form-group-c d-flex align-items-start gap-3 mt-2">
+                <input type="checkbox" id="agreeTerms" style="margin-top:3px; accent-color:var(--primary); width:16px; height:16px; flex-shrink:0" required/>
+                <label for="agreeTerms" style="font-size:0.85rem; color:var(--text-muted); cursor:pointer">
+                  I agree to the <a href="#" style="color:var(--primary)">Terms of Service</a> and <a href="#" style="color:var(--primary)">Privacy Policy</a>. I confirm all information provided is accurate.
+                </label>
+              </div>
+
+              <button type="submit" class="btn-primary-c w-100 justify-content-center mt-3" style="padding:16px">
+                <i class="fas fa-user-check me-2"></i> Submit Registration
+              </button>
+
+            </form>
+          </div>
+
+          <!-- Already registered note -->
+          <p class="text-center mt-4" style="color:var(--text-muted); font-size:0.88rem">
+            Already registered? <a href="workers.html" style="color:var(--primary); font-weight:600">View your listing →</a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    // Custom submit handler to show toast
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const toast = document.getElementById('registerToast');
+      toast.style.display = 'flex';
+      toast.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      this.reset();
+      setTimeout(() => { toast.style.display = 'none'; }, 6000);
+    });
+  </script>
+</body>
+</html>
